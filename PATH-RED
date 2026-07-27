@@ -246,6 +246,14 @@ Si tu objetivo es trabajar en pentesting real en los próximos uno/dos años, yo
 >>> Tips para aprobar OSCP <<<
 
 1) Comprometer una máquina parecida a las del OSCP (en HackTheBox, TryHackMe, VulnHub, etc.)
+	1. Map the domain with BloodHound — let it draw the shortest path to Domain Admin
+	2. Kerberoasting — request TGS tickets for any SPN, crack offline
+	3. AS-REP roasting — target pre-auth-disabled accounts, crack offline
+	4. Pass-the-Hash / pass-the-ticket — authenticate with the NTLM hash, no password
+	5. Enumerate ACLs with PowerView — GenericAll and WriteDACL are hidden privesc paths
+	6. Lateral movement and pivoting — chain creds host to host
+	7. Dump secrets with Mimikatz — harvest in-memory creds once you are local admin
+	8. Own the domain with DCSync — pull every hash including krbtgt
 2) Entender que  se esta  haciendo en cada momento
 3) Documentar todo el proceso en el formato que se prefiera: texto, video, etc.
 4) Volver al paso 1 (parar solo cuando se tenga la suficiente seguridad y apuntarse al PWK/OSCP)
@@ -259,7 +267,6 @@ Si tu objetivo es trabajar en pentesting real en los próximos uno/dos años, yo
     - Plantilla en Word para la parte de reportes: https://github.com/whoisflynn/OSCP-Exam-Report-Template
     - Software para realizar Screenshots: https://getgreenshot.org/
     - HackTricks: https://book.hacktricks.xyz/
-
 
 
 >>> Tryhackme por fases de pentesting <<<
